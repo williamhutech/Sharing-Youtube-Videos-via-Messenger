@@ -1,0 +1,27 @@
+{
+"name":"Messenger Send for Youtube™",
+"description":"Share Youtube Videos Privately via the Messenger Button!",
+"version":"1.03",
+"manifest_version":2,
+  "browser_action": {
+   "default_icon": "icon.png"
+  },
+  "icons":	{ 
+				"16": "icon16.png",
+				"48": "icon48.png",
+				"128": "icon128.png"
+			},
+"browser_action": {
+    "default_icon": "icon.png"
+    },
+
+"background":{
+	"scripts": ["popup.js"]    
+},
+"content_scripts": [
+    {
+      "matches": ["http://www.youtube.com/*","https://www.youtube.com/*","https://youtube.com/*","https://youtube.com/*"],
+      "js": ["jquery-3.2.js","myscript.js"]
+    }
+  ]
+}
